@@ -1,10 +1,18 @@
 header {
+  background-color: #fff;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 body {
+  color: #030303;
   font-family: "roboto", sans-serif;
 }
 
@@ -93,6 +101,18 @@ button {
   margin-right: 8px;
 }
 
+.sidebar {
+  top: 56px;
+  position: absolute;
+  width: 240px;
+  z-index: 1;
+}
+
+.sidebar-inner {
+  min-height: 100%;
+  overflow-y: scroll;
+}
+
 .sidebar-link {
   display: flex;
   text-decoration: none;
@@ -100,17 +120,49 @@ button {
   align-items: center;
 }
 
+.filterbar {
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+  top: 56px;
+  left: 240px;
+  height: 56px;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+  z-index: 2;
+}
+
 .filter-selector {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   height: 32px;
-  min-width: 12px;
   padding: 0px 12px;
-  background-color: #717171;
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  display: inline-flex;
-  color: #fff;
   flex-wrap: nowrap;
+  width: auto;
+}
+
+.filter-selector p {
+  white-space: nowrap;
+}
+
+.filter-selector:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.filter-selector--active {
+  background-color: #030303;
+  border-color: #030303;
+  color: #fff;
+}
+
+.content {
+  margin-top: 112px;
+  margin-left: 240px;
 }
