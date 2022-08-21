@@ -7,7 +7,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   box-sizing: border-box;
 }
 
@@ -165,4 +165,21 @@ button {
 
 .filter-selector p {
   white-space: nowrap;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu-nav {
+  background: green;
+  display: none;
+  padding: 5px;
+  position: absolute;
+  left: -80px;
+  width: 100px;
+}
+
+.user-menu-nav.active {
+  display: block;
 }
